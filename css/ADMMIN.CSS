@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.card {
+  width: 190px;
+  padding: 1.9rem 1.2rem;
+  text-align: center;
+  background: #2a2b38;
+}
+
+/*Inputs*/
+.field {
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  background-color: #1f2029;
+  border-radius: 4px;
+  padding: .5em 1em;
+}
+
+.input-icon {
+  height: 1em;
+  width: 1em;
+  fill: #ffeba7;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+/*Text*/
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+/*Buttons*/
+.btn {
+  margin: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 0.6em 1.2em;
+  background-color: #ffeba7;
+  color: #5e6681;
+  box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+  transition: all .3s ease-in-out;
+}
+
+.btn-link {
+  color: #f5f5f5;
+  display: block;
+  font-size: .75em;
+  transition: color .3s ease-out;
+}
+
+/*Hover & focus*/
+.field input:focus::placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.btn:hover {
+  background-color: #5e6681;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+}
+
+.btn-link:hover {
+  color: #ffeba7;
+}
+
+
+/* Container Styles */
+.form-container, .table-container {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+}
+
+input[type="submit"], button.fancy {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button.fancy:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: white;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Column Layout */
+.columna {
+    display: flex;
+    gap: 20px;
+}
+
+.columna > div {
+    flex: 1;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+/* Floating Labels */
+label input:not([type="submit"]), label textarea, label select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+label span {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+label input:focus ~ span, 
+label input:not(:placeholder-shown) ~ span, 
+label textarea:focus ~ span, 
+label textarea:not(:placeholder-shown) ~ span, 
+label select:focus ~ span, 
+label select:not([value=""]) ~ span {
+    top: -20px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #007BFF;
+}
+
+/* Additional Button Styles */
+button.fancy {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+button.fancy:hover {
+    background-color: #218838;
+}
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    background-color: #212121;
+    border: none;
+    font: inherit;
+    color: #e8e8e8;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: not-allowed;
+    overflow: hidden;
+    transition: all 0.3s ease cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    translate: 0 105%;
+    background-color: #F53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button svg {
+    width: 32px;
+    height: 32px;
+    fill: #F53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover {
+    animation: shake 0.2s linear 1;
+  }
+  
+  .button:hover::before {
+    translate: 0 0;
+  }
+  
+  .button:hover svg {
+    fill: #e8e8e8;
+  }
+  
+  @keyframes shake {
+    0% {
+      rotate: 0deg;
+    }
+  
+    33% {
+      rotate: 10deg;
+    }
+  
+    66% {
+      rotate: -10deg;
+    }
+  
+    100% {
+      rotate: 10deg;
+    }
+  }
+  
+
